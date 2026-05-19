@@ -4,25 +4,32 @@ import React from 'react'
 const Data = [
   { 
     id: '1', 
-    days: 'Day 1 :Arival', 
+    days: 'Day 1 :Arival At Istanbul', 
     images: [
-      require('../../assets/image/cardphoto2.jpg'),
-      require('../../assets/image/china.jpeg'),
-      require('../../assets/image/china.jpeg')
+      require('../../assets/image/locationimage.jpg'),
+      require('../../assets/image/Istanbul.jpg'),
+      require('../../assets/image/istanbul.jpeg')
     ]
   },   
   { 
     id: '2', 
-    days: 'Day 2 :Arival', 
-    images: [require('../../assets/image/turki.jpeg'),
-        require('../../assets/image/china.jpeg'),
-      require('../../assets/image/china.jpeg')
+    days: 'Day 2 :Arival At Ankara ', 
+    images: [require('../../assets/image/locationimage.jpg'),
+        require('../../assets/image/ankarapic1.jpg'),
+      require('../../assets/image/Ankara1.jpg')
     ] 
   },
   { 
     id: '3', 
-     days: 'Day 3 :Arival', 
-    images: [require('../../assets/image/china.jpeg'),
+     days: 'Day 3 :Arival At Antalya', 
+    images: [require('../../assets/image/locationimage.jpg'),
+        require('../../assets/image/antalya.jpg'),
+      require('../../assets/image/antalya1.jpg')
+    ] 
+  }, { 
+    id: '4', 
+     days: 'Day 4 :Arival At china', 
+    images: [require('../../assets/image/locationimage.jpg'),
         require('../../assets/image/china.jpeg'),
       require('../../assets/image/china.jpeg')
     ] 
