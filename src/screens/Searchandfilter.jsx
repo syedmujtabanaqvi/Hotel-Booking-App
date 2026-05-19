@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image, FlatList } from 'react-native'
 import React from 'react'
 
-// Data structure ko clean aur consistent kar diya
 const Data = [
   { 
     id: '1', 
@@ -24,12 +23,10 @@ const Data = [
   },
 ]
 
-// Navigation prop yahan receive kar li
 const Searchandfilter = ({ navigation }) => {
   return (
     <View style={styles.container1}>
 
-      {/* Back Arrow Button */}
       <TouchableOpacity onPress={() => navigation && navigation.navigate('Login')}>
         <Image style={styles.arrow} source={require('../../assets/image/arrow.png')} />
       </TouchableOpacity>
@@ -42,10 +39,8 @@ const Searchandfilter = ({ navigation }) => {
         renderItem={({ item }) => (
           <View style={styles.card}>
             
-            {/* Title Text */}
             <Text style={styles.locationText}>{item.location}</Text>
             
-            {/* Images Container: Loop chalakar saari available images render karega */}
             <View style={styles.imageContainer}>
               {item.images.map((imgUri, index) => (
                 <Image key={index} source={imgUri} style={styles.cardImage} />
@@ -84,7 +79,7 @@ const styles = StyleSheet.create({
     marginBottom: 15
   },
   card: {
-    backgroundColor: '#2e3142', // Dark background kiya taake text sahi dikhe
+    backgroundColor: '#2e3142', 
     marginBottom: 20,
     width: '100%',
     borderRadius: 12,
@@ -97,12 +92,12 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   imageContainer: {
-    flexDirection: 'row', // Images ko sath sath line mein lagane ke liye
-    gap: 8 // Images ke darmiyan thora sa gap
+    flexDirection: 'row', 
+    gap: 8 
   },
   cardImage: {
     height: 80,
-    width: '30%', // Taake agar 3 images hon toh screen par poori aa sakein
+    width: '30%', 
     borderRadius: 8
   }
 })
