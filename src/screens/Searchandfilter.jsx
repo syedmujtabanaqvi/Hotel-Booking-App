@@ -4,7 +4,7 @@ import React from 'react'
 const Data = [
   { 
     id: '1', 
-    location: 'Japan: Tradition Meets Tomorrow', 
+    days: 'Day 1 :Arival', 
     images: [
       require('../../assets/image/cardphoto2.jpg'),
       require('../../assets/image/china.jpeg'),
@@ -13,13 +13,19 @@ const Data = [
   },   
   { 
     id: '2', 
-    location: 'Turki: The Bridge Between Continents', 
-    images: [require('../../assets/image/turki.jpeg')] 
+    days: 'Day 2 :Arival', 
+    images: [require('../../assets/image/turki.jpeg'),
+        require('../../assets/image/china.jpeg'),
+      require('../../assets/image/china.jpeg')
+    ] 
   },
   { 
     id: '3', 
-    location: 'China: Mist, Mountains, and Magic.', 
-    images: [require('../../assets/image/china.jpeg')] 
+     days: 'Day 3 :Arival', 
+    images: [require('../../assets/image/china.jpeg'),
+        require('../../assets/image/china.jpeg'),
+      require('../../assets/image/china.jpeg')
+    ] 
   },
 ]
 
@@ -39,7 +45,7 @@ const Searchandfilter = ({ navigation }) => {
         renderItem={({ item }) => (
           <View style={styles.card}>
             
-            <Text style={styles.locationText}>{item.location}</Text>
+            <Text style={styles.locationText}>{item.days}</Text>
             
             <View style={styles.imageContainer}>
               {item.images.map((imgUri, index) => (
