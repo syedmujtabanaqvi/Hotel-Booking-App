@@ -2,102 +2,54 @@ import { StyleSheet, Text, View, ImageBackground, TextInput, TouchableOpacity, A
 import LinearGradient from 'react-native-linear-gradient';
 import React, { useState , useEffect } from 'react';
 
-import auth, { updateCurrentUser } from '@react-native-firebase/auth';
-import { ActivityIndicator } from 'react-native';
 import {useNavigation} from '@react-navigation/native'
-
+//  import API_URL from '../../Config';
 
 const Login = () => {
-const navigation =useNavigation()  
-const [username, setUsername] = useState('');
-const [password, setPassword] = useState('');
-const [user, setUser] = useState(null);
-const [initializing, setInitializing] = useState(true);
-const [isLoginMode, setIsLoginMode] = useState(true);
-const onAuthStateChanged =(CurrentUser)=>{
-setUser(CurrentUser);
-if(initializing) setInitializing(false)
+// const navigation =useNavigation()  
+// const [username, setUsername] = useState('');
+// const [password, setPassword] = useState('');
 
-}
 
-useEffect(() => {
-     const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
-    return subscriber; 
-  }, []); 
 
-const handleLogin = async()=>{
-if(!username || !password )
-{
-    Alert.alert('add your password')
-    return;
-}
-try{
+// const handleLogin = async()=>{
+//   try {
+//     const response = await fetch(`${API_URL}/Login`, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+//       body: JSON.stringify({
+//         username,
+//         password
+//       })
+//     });
 
-if (isLoginMode){
-    await auth().signInWithEmailAndPassword(username,password);
-    Alert.alert('success login ho gaya hai');
-}
-else {
-await auth().createUserWithEmailAndPassword(username,password);
-Alert.alert('account created');
-}
-setPassword('');
-setUsername('');
-}
-catch(error){
-    if (error.code === 'auth/email-already-in-use') {
-        Alert.alert('Error', 'Ye email pehle se use mein hai.');
-      } else if (error.code === 'auth/invalid-email') {
-        Alert.alert('Error', 'Email address sahi format mein nahi hai.');
-      } else if (error.code === 'auth/weak-password') {
-        Alert.alert('Error', 'Password kam az kam 6 characters ka hona chahiye.');
-      } else if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
-        Alert.alert('Error', 'Email ya password ghalat hai.');
-      } else {
-        Alert.alert('Error', error.message);
-      }
-}
-const handleLogout = async () => {
-  try {
-    await auth().signOut();
-    Alert.alert('Logged out');
-  } catch (error) {
-    Alert.alert('Error', error.message);
-  }
-};
-}
-if (initializing) {
-    return (
-      <View style={styles.center}>
-        <ActivityIndicator size="large" color="#0000ff" />
-      </View>
-    );
-  }
+//     const data = await response.json();
 
-  if (user) {
-    return (
-      <View style={styles.center}>
-        <Text style={styles.title}>Welcome!</Text>
-        <Text style={styles.emailText}>Logged in as: {user.email}</Text>
-        
-        <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
-          <Text style={styles.buttonText}>Logout</Text>
-        </TouchableOpacity>
-      </View>
-    );
-  }
+//     if (response.ok) {
+//       Alert.alert("Success", data.message);
+//     } else {
+//       Alert.alert("Error", data.message);
+//     }
+
+//   } catch (error) {
+//     Alert.alert("Server error");
+//     console.log(error);
+//   }
+// };
 return (
         <View style={{ flex: 1 }}>
 
             <LinearGradient colors={['#f6f9ff00', '#111425', '#111425']} style={styles.linearGradient}>
 
                 <Text style={styles.welcome}> Welcome ! </Text>
-                <TextInput style={styles.username} placeholder='Username' placeholderTextColor={'#ffffff'} value={username} onChangeText={setUsername} />
+                <TextInput style={styles.username} placeholder='Username' placeholderTextColor={'#ffffff'}   />
 
-                <TextInput style={styles.Password} placeholder='Password' placeholderTextColor={'#ffffff'}  secureTextEntry={true} value={password} onChangeText={setPassword}/>
+                <TextInput style={styles.Password} placeholder='Password' placeholderTextColor={'#ffffff'}  />
                 <Text style={styles.Rememberme}> Remember me  </Text>
                 <Text style={styles.ForgotPassword}> Forgot Password </Text>
-                <TouchableOpacity style={styles.loginbutton} onPress={handleLogin}>
+                <TouchableOpacity style={styles.loginbutton} >
                     <Text style={styles.logintext}> Login </Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={()=>navigation.navigate('Signup')}>
@@ -205,3 +157,20 @@ const styles = StyleSheet.create({
     }
 
 })
+
+
+
+
+// try{
+
+//     if (error.code === 'auth/email-already-in-use') {
+//         Alert.alert('Error', 'Ye email pehle se use mein hai.');
+//       } else if (error.code === 'auth/invalid-email') {
+//         Alert.alert('Error', 'Email address sahi format mein nahi hai.');
+//       } else if (error.code === 'auth/weak-password') {
+//         Alert.alert('Error', 'Password kam az kam 6 characters ka hona chahiye.');
+//       } else if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
+//         Alert.alert('Error', 'Email ya password ghalat hai.');
+//       } else {
+//         Alert.alert('Error', error.message);
+//       }

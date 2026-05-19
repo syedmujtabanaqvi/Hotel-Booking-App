@@ -5,9 +5,9 @@ const confirm = [
    { id: '1', status: '(confirm:)',location: 'China.', image: require('../../assets/image/china.jpeg') },]
 
 const upcoming = [
-   { id: '1',  status: '(complete:)',location: 'Japan', image: require('../../assets/image/cardphoto2.jpg') },   
-{ id: '2',status: '(complete:)', location: 'Turki', image: require('../../assets/image/turki.jpeg') },
-     { id: '3', status: '(complete:)',location: 'China', image: require('../../assets/image/china.jpeg') },]
+   { id: '2',  status: '(complete:)',location: 'Japan', image: require('../../assets/image/cardphoto2.jpg') },   
+{ id: '3',status: '(complete:)', location: 'Turki', image: require('../../assets/image/turki.jpeg') },
+     { id: '4', status: '(complete:)',location: 'China', image: require('../../assets/image/china.jpeg') },]
 
      const allarray=[...confirm,...upcoming]
 const Search = () => {

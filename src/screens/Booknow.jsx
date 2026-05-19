@@ -3,27 +3,18 @@ import React, { useEffect, useState } from 'react'
 import LinearGradient from 'react-native-linear-gradient'
 import {useNavigation} from '@react-navigation/native'
  
-import Config from "react-native-config";
-
-const API_URL = Config.API_URL;
+// import API_URL from '../../Config';
 
 const Booknow = () => {
     const navigation = useNavigation()
-    const [city, setcity] = useState("Loading...");
+//     const [city, setcity] = useState("Loading...");
 
-useEffect(() => {
-  const getCity = async () => {
-    try {
-      const res = await fetch(`${API_URL}/`);
-      const data = await res.json();
-      setcity(data.city || "No City Found");
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  getCity();
-}, []);
+// useEffect(() => {
+//     fetch(`${API_URL}/city`)
+//  .then(res=>res.json())
+//  .then(data=> setcity(data))
+//  .catch(err=> console.log("error",err))
+// }, []);
     return (
         <View style={{ flex: 1 }}>
 
@@ -44,7 +35,7 @@ useEffect(() => {
                     </View>
                 </View>
 
-                <Text style={styles.textkarachitouk}>{city}</Text>
+                <Text style={styles.textkarachitouk}>karachi to Uk</Text>
                 <View style={styles.ratingcontainer}>
 
                     <Image style={styles.rating} source={require('../../assets/image/ratingstar.png')}></Image>
