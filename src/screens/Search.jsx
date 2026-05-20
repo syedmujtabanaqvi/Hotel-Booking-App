@@ -3,11 +3,12 @@ import { StyleSheet, Text, View, FlatList, Image } from 'react-native'
 import React from 'react'
 
 const posts = [
-    { id: '1', usernamename: 'fizzahthescorp', description:'Turkey trip was smooth, comfy stay and honestly a really good experience.',  image: require('../../assets/image/turki.jpeg') },
-      { id: '2',usernamename: 'mina khan', image: require('../../assets/image/ankarapic1.jpg') },
-   { id: '3', usernamename: 'Ali222', description: '', image: require('../../assets/image/ankarapic1.jpg') },
-      { id: '4', usernamename: '', image: require('../../assets/image/ankarapic1.jpg') }
+    { id: '1', usernamename: 'fizzahthescorp', time:'8 minutes ago' , description:'Turkey trip was smooth, comfy stay and honestly a really good experience.',  profilepic: require('../../assets/image/turki.jpeg') ,image: require('../../assets/image/turki.jpeg') },
+      { id: '2',usernamename: 'mina khan', description:'Turkey trip was smooth, comfy stay and honestly a really good experience.', image: require('../../assets/image/ankarapic1.jpg') },
+   { id: '3', usernamename: 'Ali222', description:'Turkey trip was smooth, comfy stay and honestly a really good experience.',image: require('../../assets/image/ankarapic1.jpg') },
+      { id: '4', usernamename: 'kumail212',description:'Turkey trip was smooth, comfy stay and honestly a really good experience.', image: require('../../assets/image/ankarapic1.jpg') }
 ]
+
 
 
 const Search = () => {
@@ -20,7 +21,9 @@ const Search = () => {
         keyExtractor={item => item.id}
         renderItem={({ item }) => ( 
           <View style={styles.flexcontainer}>
-            <Text style={styles.uname}>{item.usernamename}</Text>
+            <Text style={styles.uName}>{item.usernamename}</Text>
+             <Text style={styles.Timestyles}>{item.time}</Text>
+             <Image source={item.profilepic} style={styles.profilepicStyle} />
             <Image source={item.image} style={styles.imageStyle} />
             <Text style={styles.descriptionstyle}>{item.description}</Text>
            
@@ -60,16 +63,30 @@ const styles = StyleSheet.create({
     width: '90%',  
     height: 190,
     borderRadius: 8
-  },uname:{
+  },
+  profilepicStyle:{
+ 
 
-fontSize:30,
+  },uName:{
+
+fontSize:18,
 color:'white',
 marginLeft:'-20%'
 
   },
-  descriptionstyle:{
-fontSize:20,
+  Timestyles:{
+
+fontSize:13,
 color:'white',
-marginLeft:'-70%',
+marginLeft:'-28%'
+
+
+  },
+
+  descriptionstyle:{
+fontSize:15,
+color:'white',
+marginLeft:'5%',
+marginRight:'2%'
   }
 })
