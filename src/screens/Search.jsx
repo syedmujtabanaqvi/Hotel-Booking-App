@@ -99,5 +99,5 @@ marginTop:'2%'
     width:'7%' ,
      tintColor:'white' ,
      marginRight:'76%',
-    marginTop:'4%'}
+    }
 })
