@@ -10,20 +10,20 @@ const UserProfile = () => {
             <Text style={styles.UserName}>SYED MUJTABA</Text>
             <Text style={styles.Location}>Location</Text>
             <Text style={styles.Description}>Exploring the world through a lens and code. A passionate storyteller dedicated to capturing the essence of adventure and the art of filmmaking. Always on a journey to discover new horizons and create meaningful impact</Text>
-        
-         <View style={styles.milecontainer}>
-            <Image style={styles.milecomplete} source={require('../../assets/image/milecomplete.png')}></Image>
-         
-         <Text style={styles.milecompletetext1}>Miles </Text><Text  style={styles.milecompletetext2}> Complete</Text>
-         </View> 
-         <View style={styles.milecontainer2}>
-            <Image style={styles.milecomplete1} source={require('../../assets/image/milecomplete.png')}></Image>
-         
-         <Text style={styles.milecompletetext3}>Miles </Text><Text  style={styles.milecompletetext4}> Complete</Text>
-         </View> 
-         
-        
-           <TouchableOpacity style={styles.EditProfile}><Text style={styles.EditProfileText}>Edit Profile</Text> </TouchableOpacity>
+
+            <View style={styles.milecontainer}>
+                <Image style={styles.milecomplete} source={require('../../assets/image/milecomplete.png')}></Image>
+
+                <Text style={styles.milecompletetext1}>Miles </Text><Text style={styles.milecompletetext2}> Complete</Text>
+            </View>
+            <View style={styles.milecontainer2}>
+                <Image style={styles.milecomplete1} source={require('../../assets/image/milecomplete.png')}></Image>
+
+                <Text style={styles.milecompletetext3}>Miles </Text><Text style={styles.milecompletetext4}> Complete</Text>
+            </View>
+
+
+            <TouchableOpacity style={styles.EditProfile}><Text style={styles.EditProfileText}>Edit Profile</Text> </TouchableOpacity>
         </View>
     )
 }
@@ -81,98 +81,98 @@ const styles = StyleSheet.create({
         paddingTop: '-2%',
         fontWeight: '800',
         fontSize: 27
-    },milecontainer:{
+    }, milecontainer: {
 
-        marginTop:'4%',
-        flexDirection:'column',
-        alignContent:'center',
-        paddingLeft:'14%',
+        marginTop: '4%',
+        flexDirection: 'column',
+        alignContent: 'center',
+        paddingLeft: '14%',
     },
-    milecomplete:{
-        tintColor:'#72f83d',
-        flexDirection:'column',
-        alignContent:'center',
-        width:'20%',
-        height:90,
-        
-    },milecomplete1:{
-        tintColor:'#72f83d',
-        width:'20%',
-        height:69,
+    milecomplete: {
+        tintColor: '#72f83d',
+        flexDirection: 'column',
+        alignContent: 'center',
+        width: '20%',
+        height: 90,
 
-    },
-    milecomplete3:{
-
-        tintColor:'#72f83d',
-        width:'21%',
-        height:69,
+    }, milecomplete1: {
+        tintColor: '#72f83d',
+        width: '20%',
+        height: 69,
 
     },
-    milecompletetext2:{
-        color:'white',
-        fontSize:15,
-    },
-    milecontainertext:{
-     flexDirection:'column',
-      
-    },
-    milecompletetext1:{
-        color:'white',
-        fontSize:15,
-        paddingLeft:'6%',
-    },
-    milecompletetext2:{
-        color:'white',
-        flexDirection:'column',
-        alignContent:'space-between',
-        fontSize:15,
+    milecomplete3: {
 
-    },milecontainer:{
-
-        marginTop:'4%',
-        flexDirection:'column',
-        alignContent:'center',
-        paddingLeft:'14%',
-    },
-    milecomplete:{
-        tintColor:'#72f83d',
-        flexDirection:'column',
-        alignContent:'center',
-        width:'20%',
-        height:90,
-        
-    },milecomplete1:{
-        tintColor:'#72f83d',
-        width:'20%',
-        height:69,
+        tintColor: '#72f83d',
+        width: '21%',
+        height: 69,
 
     },
-    milecomplete3:{
-
-        tintColor:'#72f83d',
-        width:'21%',
-        height:69,
-
+    milecompletetext2: {
+        color: 'white',
+        fontSize: 15,
     },
-    milecompletetext2:{
-        color:'white',
-        fontSize:15,
-    },
-    milecontainertext:{
-     flexDirection:'column',
-      
-    },
-    milecompletetext1:{
-        color:'white',
-        fontSize:15,
-        paddingLeft:'6%',
-    },
-    milecompletetext2:{
-        color:'white',
-        flexDirection:'column',
-        alignContent:'space-between',
-        fontSize:15,
+    milecontainertext: {
+        flexDirection: 'column',
 
     },
-    
+    milecompletetext1: {
+        color: 'white',
+        fontSize: 15,
+        paddingLeft: '6%',
+    },
+    milecompletetext2: {
+        color: 'white',
+        flexDirection: 'column',
+        alignContent: 'space-between',
+        fontSize: 15,
+
+    }, milecontainer: {
+
+        marginTop: '4%',
+        flexDirection: 'column',
+        alignContent: 'center',
+        paddingLeft: '14%',
+    },
+    milecomplete: {
+        tintColor: '#72f83d',
+        flexDirection: 'column',
+        alignContent: 'center',
+        width: '20%',
+        height: 90,
+
+    }, milecomplete1: {
+        tintColor: '#72f83d',
+        width: '20%',
+        height: 69,
+
+    },
+    milecomplete3: {
+
+        tintColor: '#72f83d',
+        width: '21%',
+        height: 69,
+
+    },
+    milecompletetext2: {
+        color: 'white',
+        fontSize: 15,
+    },
+    milecontainertext: {
+        flexDirection: 'column',
+
+    },
+    milecompletetext1: {
+        color: 'white',
+        fontSize: 15,
+        paddingLeft: '6%',
+    },
+    milecompletetext2: {
+        color: 'white',
+        flexDirection: 'column',
+        alignContent: 'space-between',
+        fontSize: 15,
+
+    },
+
 })

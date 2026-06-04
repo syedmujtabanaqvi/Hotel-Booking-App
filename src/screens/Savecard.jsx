@@ -1,16 +1,16 @@
 import { StyleSheet, Text, View, ImageBackground, FlatList, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
-import {useNavigation} from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native'
 
 const Data = [
-     { id: '1', location: 'Japan: Tradition Meets Tomorrow', image: require('../../assets/image/cardphoto2.jpg') },   
-{ id: '2', location: 'Turki: The Bridge Between Continents', image: require('../../assets/image/turki.jpeg') },
-     { id: '3', location: 'China: Mist, Mountains, and Magic.', image: require('../../assets/image/china.jpeg') },]
+    { id: '1', location: 'Japan: Tradition Meets Tomorrow', image: require('../../assets/image/cardphoto2.jpg') },
+    { id: '2', location: 'Turki: The Bridge Between Continents', image: require('../../assets/image/turki.jpeg') },
+    { id: '3', location: 'China: Mist, Mountains, and Magic.', image: require('../../assets/image/china.jpeg') },]
 
 
 
 const Save = () => {
-const navigation = useNavigation()
+    const navigation = useNavigation()
     return (
         <View style={styles.savecontainer}>
             <ImageBackground style={styles.VintageCompassonMap} source={require('../../assets/image/VintageCompassonMap.png')}>
@@ -30,8 +30,8 @@ const navigation = useNavigation()
                         <View style={styles.card} >
                             <Image source={item.image} style={styles.place} />
                             <Text style={styles.title}>{item.location}</Text>
-                            <TouchableOpacity  style={styles.button} onPress={() => navigation.navigate('Search')}>
- <Text style={styles.ShowMore}>Show More </Text>
+                            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Search')}>
+                                <Text style={styles.ShowMore}>Show More </Text>
                             </TouchableOpacity>
                         </View>
                     )}
@@ -65,15 +65,15 @@ const styles = StyleSheet.create({
         marginTop: '25%',
         marginLeft: '9%'
     }
-    ,title:{
+    , title: {
 
-       color:'white',
-       fontSize:20,
-       paddingLeft:'33%',
-       paddingBottom:'40%',
-       position:'absolute',
-       elevation:3,
-       fontWeight:'900'
+        color: 'white',
+        fontSize: 20,
+        paddingLeft: '33%',
+        paddingBottom: '40%',
+        position: 'absolute',
+        elevation: 3,
+        fontWeight: '900'
     }
     , card: {
 
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
         alignContent: 'space-between',
         marginBottom: '5%',
         paddingLeft: 20,
-     
+
     }, place: {
 
         width: 200,
@@ -98,21 +98,21 @@ const styles = StyleSheet.create({
 
 
     },
-    button:{
-backgroundColor:'#45d40d',
-height:36,
-marginBottom:'10%',
-borderRadius:7,
-width:'80%',
-marginLeft:'20%',
-position:'absolute',
-alignItems:'center',
-elevation:6
-    },ShowMore:{
-color:'white',
-fontSize:17,
-fontWeight:'600',
-paddingTop:'3%'
+    button: {
+        backgroundColor: '#45d40d',
+        height: 36,
+        marginBottom: '10%',
+        borderRadius: 7,
+        width: '80%',
+        marginLeft: '20%',
+        position: 'absolute',
+        alignItems: 'center',
+        elevation: 6
+    }, ShowMore: {
+        color: 'white',
+        fontSize: 17,
+        fontWeight: '600',
+        paddingTop: '3%'
 
     }
 

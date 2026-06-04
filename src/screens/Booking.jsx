@@ -132,18 +132,18 @@ const Booking = () => {
 
         <View style={styles.slide}>
           <Image style={styles.imagecard} source={require('../../assets/image/hiking.png')}></Image>
-<Text style={{color:'white',fontSize:19 , marginTop:'6%',marginLeft:'9%'}}> Hike</Text>
+          <Text style={{ color: 'white', fontSize: 19, marginTop: '6%', marginLeft: '9%' }}> Hike</Text>
         </View>
         <View style={styles.slide}>
-<Image style={styles.imagecard1} source={require('../../assets/image/climb.png')}></Image>
-<Text style={{color:'white',fontSize:19 , marginTop:'7%',marginLeft:'6%'}}> Climb</Text>
+          <Image style={styles.imagecard1} source={require('../../assets/image/climb.png')}></Image>
+          <Text style={{ color: 'white', fontSize: 19, marginTop: '7%', marginLeft: '6%' }}> Climb</Text>
         </View>
         <View style={styles.slide1}>
           <Image style={styles.imagecard2} source={require('../../assets/image/kayal.png')}></Image>
-<Text style={{color:'white',fontSize:19 , marginTop:'10%',marginLeft:'2%'}}> kayak</Text>
+          <Text style={{ color: 'white', fontSize: 19, marginTop: '10%', marginLeft: '2%' }}> kayak</Text>
         </View>
       </View>
-      <TouchableOpacity style={styles.loginbutton} onPress={()=>navigation.navigate('Searchandfilter')}>
+      <TouchableOpacity style={styles.loginbutton} onPress={() => navigation.navigate('Searchandfilter')}>
         <Text style={styles.ApplyFiltertext}> Apply Filter </Text>
       </TouchableOpacity>
     </View>
@@ -296,22 +296,22 @@ const styles = StyleSheet.create({
   },
   slide: {
     flex: 1,
-    flexDirection:'row',
+    flexDirection: 'row',
     backgroundColor: '#21253f',
     width: '10%',
     height: 50,
     borderRadius: 10,
-    paddingLeft:'6%',
-    paddingTop:'1%'
+    paddingLeft: '6%',
+    paddingTop: '1%'
   },
   slide1: {
     flex: 1,
-    flexDirection:'row',
+    flexDirection: 'row',
     backgroundColor: '#21253f',
     width: '10%',
     height: 50,
     borderRadius: 10,
-    paddingLeft:'2%',
+    paddingLeft: '2%',
   },
 
   imagecard: {
@@ -319,11 +319,11 @@ const styles = StyleSheet.create({
     width: '25%',
     borderRadius: 10,
   },
-   imagecard1: {
+  imagecard1: {
     height: 45,
     width: '25%',
     borderRadius: 10,
-  },imagecard2: {
+  }, imagecard2: {
     height: 40,
     width: '30%',
     borderRadius: 10,

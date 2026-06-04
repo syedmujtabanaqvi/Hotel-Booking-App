@@ -1,62 +1,62 @@
 import { StyleSheet, Text, View, ImageBackground, TextInput, TouchableOpacity, Alert } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient';
-import React, { useState , useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-import {useNavigation} from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native'
 //  import API_URL from '../../Config';
 
 const Login = () => {
-// const navigation =useNavigation()  
-// const [username, setUsername] = useState('');
-// const [password, setPassword] = useState('');
+    // const navigation =useNavigation()  
+    // const [username, setUsername] = useState('');
+    // const [password, setPassword] = useState('');
 
 
 
-// const handleLogin = async()=>{
-//   try {
-//     const response = await fetch(`${API_URL}/Login`, {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json"
-//       },
-//       body: JSON.stringify({
-//         username,
-//         password
-//       })
-//     });
+    // const handleLogin = async()=>{
+    //   try {
+    //     const response = await fetch(`${API_URL}/Login`, {
+    //       method: "POST",
+    //       headers: {
+    //         "Content-Type": "application/json"
+    //       },
+    //       body: JSON.stringify({
+    //         username,
+    //         password
+    //       })
+    //     });
 
-//     const data = await response.json();
+    //     const data = await response.json();
 
-//     if (response.ok) {
-//       Alert.alert("Success", data.message);
-//     } else {
-//       Alert.alert("Error", data.message);
-//     }
+    //     if (response.ok) {
+    //       Alert.alert("Success", data.message);
+    //     } else {
+    //       Alert.alert("Error", data.message);
+    //     }
 
-//   } catch (error) {
-//     Alert.alert("Server error");
-//     console.log(error);
-//   }
-// };
-return (
+    //   } catch (error) {
+    //     Alert.alert("Server error");
+    //     console.log(error);
+    //   }
+    // };
+    return (
         <View style={{ flex: 1 }}>
 
             <LinearGradient colors={['#f6f9ff00', '#111425', '#111425']} style={styles.linearGradient}>
 
                 <Text style={styles.welcome}> Welcome ! </Text>
-                <TextInput style={styles.username} placeholder='Username' placeholderTextColor={'#ffffff'}   />
+                <TextInput style={styles.username} placeholder='Username' placeholderTextColor={'#ffffff'} />
 
-                <TextInput style={styles.Password} placeholder='Password' placeholderTextColor={'#ffffff'}  />
+                <TextInput style={styles.Password} placeholder='Password' placeholderTextColor={'#ffffff'} />
                 <Text style={styles.Rememberme}> Remember me  </Text>
                 <Text style={styles.ForgotPassword}> Forgot Password </Text>
                 <TouchableOpacity style={styles.loginbutton} >
                     <Text style={styles.logintext}> Login </Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={()=>navigation.navigate('Signup')}>
-                <Text style={styles.SignUp}> Sign Up  </Text>
+                <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
+                    <Text style={styles.SignUp}> Sign Up  </Text>
                 </TouchableOpacity>
                 <Text style={styles.Dontthaveanaccount}> Dont't have an account? </Text>
-                
+
             </LinearGradient>
             <ImageBackground style={styles.image} source={require('../../assets//image/baground-image.jpg')}></ImageBackground>
         </View>
@@ -149,10 +149,10 @@ const styles = StyleSheet.create({
 
     }, SignUp
         : {
-            marginLeft: '7%',
-            marginTop: '2%',
-            fontSize:15,
-            color: '#5eff00',
+        marginLeft: '7%',
+        marginTop: '2%',
+        fontSize: 15,
+        color: '#5eff00',
 
     }
 

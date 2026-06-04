@@ -1,20 +1,20 @@
 import { StyleSheet, Text, View, ImageBackground, Image, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import LinearGradient from 'react-native-linear-gradient'
-import {useNavigation} from '@react-navigation/native'
- 
+import { useNavigation } from '@react-navigation/native'
+
 // import API_URL from '../../Config';
 
 const Booknow = () => {
     const navigation = useNavigation()
-//     const [city, setcity] = useState("Loading...");
+    //     const [city, setcity] = useState("Loading...");
 
-// useEffect(() => {
-//     fetch(`${API_URL}/city`)
-//  .then(res=>res.json())
-//  .then(data=> setcity(data))
-//  .catch(err=> console.log("error",err))
-// }, []);
+    // useEffect(() => {
+    //     fetch(`${API_URL}/city`)
+    //  .then(res=>res.json())
+    //  .then(data=> setcity(data))
+    //  .catch(err=> console.log("error",err))
+    // }, []);
     return (
         <View style={{ flex: 1 }}>
 
@@ -47,7 +47,7 @@ const Booknow = () => {
                 </LinearGradient>
 
                 <View style={styles.LOGINcontainer}>
-                    <TouchableOpacity style={styles.loginbutton} onPress={()=>navigation.navigate('Booking')}>
+                    <TouchableOpacity style={styles.loginbutton} onPress={() => navigation.navigate('Booking')}>
                         <Text style={styles.BOOKNOWtext}> BOOK NOW </Text>
                     </TouchableOpacity>
                 </View>
