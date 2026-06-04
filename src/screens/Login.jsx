@@ -3,41 +3,10 @@ import LinearGradient from 'react-native-linear-gradient';
 import React, { useState, useEffect } from 'react';
 
 import { useNavigation } from '@react-navigation/native'
-//  import API_URL from '../../Config';
+
 
 const Login = () => {
-    // const navigation =useNavigation()  
-    // const [username, setUsername] = useState('');
-    // const [password, setPassword] = useState('');
-
-
-
-    // const handleLogin = async()=>{
-    //   try {
-    //     const response = await fetch(`${API_URL}/Login`, {
-    //       method: "POST",
-    //       headers: {
-    //         "Content-Type": "application/json"
-    //       },
-    //       body: JSON.stringify({
-    //         username,
-    //         password
-    //       })
-    //     });
-
-    //     const data = await response.json();
-
-    //     if (response.ok) {
-    //       Alert.alert("Success", data.message);
-    //     } else {
-    //       Alert.alert("Error", data.message);
-    //     }
-
-    //   } catch (error) {
-    //     Alert.alert("Server error");
-    //     console.log(error);
-    //   }
-    // };
+ 
     return (
         <View style={{ flex: 1 }}>
 
@@ -160,17 +129,3 @@ const styles = StyleSheet.create({
 
 
 
-
-// try{
-
-//     if (error.code === 'auth/email-already-in-use') {
-//         Alert.alert('Error', 'Ye email pehle se use mein hai.');
-//       } else if (error.code === 'auth/invalid-email') {
-//         Alert.alert('Error', 'Email address sahi format mein nahi hai.');
-//       } else if (error.code === 'auth/weak-password') {
-//         Alert.alert('Error', 'Password kam az kam 6 characters ka hona chahiye.');
-//       } else if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
-//         Alert.alert('Error', 'Email ya password ghalat hai.');
-//       } else {
-//         Alert.alert('Error', error.message);
-//       }
